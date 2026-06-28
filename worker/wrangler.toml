@@ -1,9 +1,6 @@
 name = "cloudpan-parser"
-main = "src/index.js"
+main = "dist/worker-with-frontend.js"
 compatibility_date = "2024-01-01"
 
 [vars]
 CACHE_TTL = "3600"
-
-[env.production]
-name = "cloudpan-parser"

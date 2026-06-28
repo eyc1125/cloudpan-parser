@@ -1,19 +1,25 @@
 {
   "name": "cloudpan-parser",
-  "version": "1.0.0",
-  "description": "云盘直链解析工具 - 支持天翼网盘、百度网盘、阿里云盘等",
+  "version": "0.0.02",
+  "description": "全能型直链解析与文件存储平台 - 支持多网盘/短视频/文件上传/AI助手",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy:worker": "cd worker && wrangler deploy",
-    "deploy:pages": "wrangler pages deploy dist"
+    "build:worker": "node worker/build-with-frontend.cjs",
+    "deploy:worker": "node deploy-worker.cjs",
+    "deploy:pages": "wrangler pages deploy dist",
+    "db:init": "node worker/scripts/init-db.cjs"
   },
   "dependencies": {
     "vue": "^3.4.0",
+    "vue-router": "^4.2.0",
+    "pinia": "^2.1.0",
     "hls.js": "^1.5.0",
-    "dplayer": "^1.27.0"
+    "dplayer": "^1.27.0",
+    "echarts": "^5.4.0",
+    "marked": "^12.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",
